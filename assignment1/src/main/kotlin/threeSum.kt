@@ -4,42 +4,42 @@
 
 
 // Kotlin code for threeSum program //
-fun threeSum(nums: List<Int>): List<List<Int>> {
+fun threeSum(nums: IntArray): List<List<Int>> {
 
-    // Sort the input list first
-    val sortedNums = nums.sorted()
+    // Sort the input IntArray first
+    nums.sort()
 
     // List to store triplets
     val triplets = mutableListOf<List<Int>>()
 
     // iterate through the sorted array
-    for (i in 0..<sortedNums.size - 2) {
+    for (i in 0 until nums.size - 2) {
 
         // Skip duplicate elements
-        if ((i > 0) and (sortedNums[i] == sortedNums[i - 1])) {
+        if (i > 0 && nums[i] == nums[i - 1]) {
             continue
         }
 
         // Use two pointers (j & k) such that this pair sums to negative of current element (i)
         var j = i + 1
-        var k = sortedNums.size - 1
+        var k = nums.size - 1
 
         // execute loop until we exhaust the elements in array
         while (j < k) {
 
             // calculate the total sum
-            val total = sortedNums[i] + sortedNums[j] + sortedNums[k]
+            val total = nums[i] + nums[j] + nums[k]
 
             // conditional branches based on total sum
             when {
                 total == 0 -> {
                     // desired condition: add list to triplets
-                    triplets.add(listOf(sortedNums[i], sortedNums[j], sortedNums[k]))
+                    triplets.add(listOf(nums[i], nums[j], nums[k]))
                     // Skip duplicate elements
-                    while ((j < k) and (sortedNums[j] == sortedNums[j + 1])) {
+                    while (j < k && nums[j] == nums[j + 1]) {
                         j++
                     }
-                    while ((j < k) and (sortedNums[k] == sortedNums[k - 1])) {
+                    while (j < k && nums[k] == nums[k - 1]) {
                         k--
                     }
                     // Move pointers
@@ -51,7 +51,6 @@ fun threeSum(nums: List<Int>): List<List<Int>> {
             }
         }
     }
-
     return triplets
 }
 
