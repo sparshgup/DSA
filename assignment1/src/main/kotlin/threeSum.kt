@@ -1,7 +1,11 @@
-// threeSum //
-// Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
-// such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0
-
+/**
+ * ThreeSum program
+ * Given an integer array [nums], return all the triplets [nums[i], nums[j], nums[k]]
+ * such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+ *
+ * @param nums The input integer array.
+ * @return A list of all unique triplets that sum up to zero.
+ */
 
 // Kotlin code for threeSum program //
 fun threeSum(nums: IntArray): List<List<Int>> {

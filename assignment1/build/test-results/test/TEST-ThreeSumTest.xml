@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ThreeSumTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-01-20T18:02:11" hostname="Sparshs-MacBook-Pro.local" time="0.02">
+<testsuite name="ThreeSumTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-01-22T22:40:10" hostname="Sparshs-MBP.olin.edu" time="0.02">
   <properties/>
-  <testcase name="testDuplicates()" classname="ThreeSumTest" time="0.017"/>
-  <testcase name="testTriplets()" classname="ThreeSumTest" time="0.0"/>
-  <testcase name="testEmptyInput()" classname="ThreeSumTest" time="0.0"/>
+  <testcase name="testDuplicates()" classname="ThreeSumTest" time="0.016"/>
+  <testcase name="testTriplets()" classname="ThreeSumTest" time="0.001"/>
+  <testcase name="testEmptyInput()" classname="ThreeSumTest" time="0.001"/>
   <testcase name="testNoTriplets()" classname="ThreeSumTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
