@@ -4,7 +4,7 @@
 
 **1. What features do you like about Kotlin?**
 
-- The type inference is a good thing to have in Kotlin, unlike in languages like C.
+- The type inference is a good thing to have in Kotlin.
 - The extension functions are such a nice thing and reduces effort.
 - We can easily leverage existing Java libraries.
 - Removes the need for explicit casting.
