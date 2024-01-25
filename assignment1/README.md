@@ -9,7 +9,7 @@
 - We can easily leverage existing Java libraries.
 - Removes the need for explicit casting.
 - `when` for having conditional branches is very thoughtful.
-- The Single-function expressions is a little thing but would simplify so much code.
+- The single-expression function is a little thing but would simplify so much code.
 - Data classes would be very helpful when using classes for custom data types.
 - I have seen programming languages have problems with null pointer exceptions, and it is handled elegantly
   in Kotlin so that developers can avoid having them.
