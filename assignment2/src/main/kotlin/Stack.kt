@@ -3,14 +3,14 @@
  * @param T the type of data stored in the stack
  */
 class Stack<T> {
-    private val list = DoublyLinkedList<T>()
+    private val stack = DoublyLinkedList<T>()
 
     /**
      * Add [data] to the top of the stack
      * @param data the new value to put onto the stack
      */
     fun push(data: T) {
-        return list.pushFront(data)
+        return stack.pushFront(data)
     }
 
     /**
@@ -18,20 +18,20 @@ class Stack<T> {
      * @return the value at the top of the stack or nil if none exists
      */
     fun pop(): T? {
-        return list.popFront()
+        return stack.popFront()
     }
 
     /**
      * @return the value on the top of the stack or nil if none exists
      */
     fun peek(): T? {
-        return list.peekFront()
+        return stack.peekFront()
     }
 
     /**
      * @return true if the stack is empty and false otherwise
      */
     fun isEmpty(): Boolean {
-        return list.isEmpty()
+        return stack.isEmpty()
     }
 }

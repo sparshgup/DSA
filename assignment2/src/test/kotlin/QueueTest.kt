@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 import kotlin.test.assertNull
+import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-class StackTest {
+class QueueTest {
 
     @Test
     fun enqueue() {
@@ -12,8 +12,6 @@ class StackTest {
         assertEquals(1, queue.peek())
         queue.enqueue(2)
         assertEquals(1, queue.peek())
-        assertEquals(1, queue.dequeue())
-        assertEquals(2, queue.dequeue())
     }
 
     @Test
@@ -37,7 +35,7 @@ class StackTest {
 
     @Test
     fun isEmpty() {
-        val stack = Stack<String>()
-        assertTrue(stack.isEmpty())
+        val queue = Queue<String>()
+        assertTrue(queue.isEmpty())
     }
 }

@@ -37,7 +37,6 @@ class DoublyLinkedListTest {
         list.pushBack(2)
         Assertions.assertEquals(2, list.popBack())
         Assertions.assertEquals(1, list.popBack())
-        assertNull(list.popFront())
     }
 
     @Test

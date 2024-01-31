@@ -12,12 +12,14 @@ class DoublyLinkedList<T> {
      */
     fun pushFront(data: T) {
         val newNode = DLLNode(data)
-        newNode.next = head
-        if (head != null) {
+        if (isEmpty()) {
+            head = newNode
+            tail = newNode
+        } else {
+            newNode.next = head
             head?.prev = newNode
+            head = newNode
         }
-        head = newNode
-        newNode.prev = null
     }
 
     /**
@@ -26,12 +28,14 @@ class DoublyLinkedList<T> {
      */
     fun pushBack(data: T) {
         val newNode = DLLNode(data)
-        tail?.next = newNode
-        if (tail != null) {
+        if (isEmpty()) {
+            head = newNode
+            tail = newNode
+        } else {
+            tail?.next = newNode
             newNode.prev = tail
+            tail = newNode
         }
-        tail = newNode
-        newNode.next = null
     }
 
     /**
