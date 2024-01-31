@@ -7,7 +7,7 @@ class Queue<T> {
 
     /**
      * Add [data] to the end of the queue.
-     * @param data the new value to put onto the stack
+     * @param data the new value to put onto the queue
      */
     fun enqueue(data: T) {
         return queue.pushBack(data)
