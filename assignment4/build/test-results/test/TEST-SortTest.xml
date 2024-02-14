@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SortTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-02-13T20:11:37" hostname="Sparshs-MacBook-Pro.local" time="0.023">
+  <properties/>
+  <testcase name="testMergeSort()" classname="SortTest" time="0.012"/>
+  <testcase name="testHeapSort()" classname="SortTest" time="0.006"/>
+  <testcase name="testInsertionSort()" classname="SortTest" time="0.003"/>
+  <testcase name="testQuickSort()" classname="SortTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

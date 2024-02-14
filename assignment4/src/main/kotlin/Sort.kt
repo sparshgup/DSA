@@ -2,7 +2,7 @@
  * A class that implements the following sorting algorithms:
  *  - Heap Sort
  *  - Insertion Sort
- *  - Bucket Sort
+ *  - Merge Sort
  *  - Quick Sort
  *
  * Source used: Introduction to Algorithms, CLRS
@@ -30,7 +30,7 @@ class Sort {
 
     /**
      * Sorts the given array using the Insertion Sort algorithm.
-     * Time Complexity: O(n^2)
+     * Time Complexity (average): O(n^2)
      *
      * @param arr The array to be sorted.
      */
@@ -47,35 +47,44 @@ class Sort {
     }
 
     /**
-     * Sorts the given array using the Bucket Sort algorithm.
-     * Time Complexity: O(n + k), where n is the number of elements and k is the number of buckets.
+     * Sorts the given array using the Merge Sort algorithm.
+     * Time Complexity: O(n log n)
      *
      * @param arr The array to be sorted.
      */
-    fun bucketSort(arr: IntArray){
-        val n = arr.size
-        val sortedArr = IntArray(n)
+    fun mergeSort(arr: IntArray) {
+        if (arr.size <= 1) return // base case
 
-        // create buckets
-        val buckets = Array<MutableList<Int>>(n) { mutableListOf() }
+        val mid = arr.size / 2
+        val leftArr = arr.copyOfRange(0, mid)
+        val rightArr = arr.copyOfRange(mid, arr.size)
 
-        // add elements to buckets
-        for (i in 0 until n) {
-            val j = arr[i]
-            buckets[j].add(arr[i])
-        }
+        mergeSort(leftArr)
+        mergeSort(rightArr)
 
-        // sort each bucket using InsertionSort
-        for (bucket in buckets) {
-            insertionSort(bucket.toIntArray())
-        }
+        merge(leftArr, rightArr, arr)
+    }
 
-        // concatenate the bucket lists
-        var index = 0
-        for (bucket in buckets) {
-            for (element in bucket) {
-                arr[index++] = element
+    private fun merge(leftArr: IntArray, rightArr: IntArray, result: IntArray) {
+        var left = 0
+        var right = 0
+        var i = 0
+
+        // Merge elements from the left and rights arrays to the result array
+        while (left < leftArr.size && right < rightArr.size) {
+            if (leftArr[left] <= rightArr[right]) {
+                result[i++] = leftArr[left++]
+            } else {
+                result[i++] = rightArr[right++]
             }
+        }
+
+        // copy elements from arrays
+        while (left < leftArr.size) {
+            result[i++] = leftArr[left++]
+        }
+        while (right < rightArr.size) {
+            result[i++] = rightArr[right++]
         }
     }
 
