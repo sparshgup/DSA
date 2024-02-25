@@ -60,11 +60,11 @@ class Matrix (private val n: Int) {
         return result
     }
 
-    private fun strassenMultiplyRecursive(A: Matrix, B: Matrix, C: Matrix, n: Int) {
+    private fun strassenMultiplyRecursive(a: Matrix, b: Matrix, c: Matrix, n: Int) {
         // Base case
         if (n == 1) {
-            val value = A.getElement(0, 0) * B.getElement(0, 0)
-            C.setValue(0, 0, value)
+            val value = a.getElement(0, 0) * b.getElement(0, 0)
+            c.setValue(0, 0, value)
             return
         }
 
