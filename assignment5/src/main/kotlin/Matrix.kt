@@ -7,7 +7,7 @@
  */
 
 class Matrix (private val n: Int) {
-    private val matrix: Array<Array<Double>> = Array(n) {Array(n) { 0.0 } }
+    val matrix: Array<Array<Double>> = Array(n) {Array(n) { 0.0 } }
 
     init {
         require (n > 0) {"Matrix size cannot be 0!"}
@@ -62,7 +62,7 @@ class Matrix (private val n: Int) {
             for (j in 0 until n) {
                 var sum = 0.0
                 for (k in 0 until n) {
-                    sum += matrix[i][j] * other.matrix[j][k]
+                    sum += matrix[i][k] * other.matrix[k][j]
                 }
                 result.matrix[i][j] = sum
             }
@@ -181,8 +181,8 @@ class Matrix (private val n: Int) {
 
         // C11 = M1 + M4 - M5 + M7
         addMatrices(m1, m4, temp1)
-        addMatrices(m5, m7, temp2)
-        subtractMatrices(temp1, temp2, c11)
+        subtractMatrices(temp1, m5, temp2)
+        addMatrices(temp2, m7, c11)
 
         // C12 = M3 + M5
         addMatrices(m3, m5, c12)
@@ -224,8 +224,7 @@ class Matrix (private val n: Int) {
         val n = mat1.n
         for (i in 0 until n) {
             for (j in 0 until n) {
-                val sum = mat1.getElement(i, j) + mat2.getElement(i, j)
-                result.setValue(i, j, sum)
+                result.setValue(i, j, mat1.getElement(i, j) + mat2.getElement(i, j))
             }
         }
     }
@@ -240,8 +239,7 @@ class Matrix (private val n: Int) {
         val n = mat1.n
         for (i in 0 until n) {
             for (j in 0 until n) {
-                val diff = mat1.getElement(i, j) - mat2.getElement(i, j)
-                result.setValue(i, j, diff)
+                result.setValue(i, j, mat1.getElement(i, j) - mat2.getElement(i, j))
             }
         }
     }
