@@ -19,11 +19,15 @@ class NeedlemanWunsch (
     private val m: Int = seqB.length + 1
     private val matrixF: Array<Array<Int>> = Array(n) {Array(m) { 0 } }
 
+    init {
+        computeMatrixF()
+    }
+
     /**
      * Aligns the two sequences using the Needleman-Wunsch algorithm
      * and prints the aligned sequences.
      */
-    private fun alignSequences() {
+    fun alignSequences() {
         var alignmentA = ""
         var alignmentB = ""
         var i = seqA.length

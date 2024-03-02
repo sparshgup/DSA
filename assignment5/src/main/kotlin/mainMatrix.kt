@@ -26,7 +26,7 @@ fun main() {
         val traditionalAverageTime = traditionalTotalTime.toDouble() / iterations
         val strassenAverageTime = strassenTotalTime.toDouble() / iterations
 
-        println("$size\t\t\t$traditionalAverageTime\t\t\t\t\t$strassenAverageTime")
+        println("$size x $size\t\t$traditionalAverageTime\t\t\t\t\t$strassenAverageTime")
     }
 }
 
