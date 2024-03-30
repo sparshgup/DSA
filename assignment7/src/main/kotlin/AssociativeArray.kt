@@ -6,7 +6,7 @@
 class AssociativeArray<K, V> {
     private var table: Array<Node<K, V>?>
     var capacity = 16
-    private var size = 0
+    var size = 0
 
     init {
         table = arrayOfNulls(capacity)
