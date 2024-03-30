@@ -43,6 +43,6 @@ Data Structures and Algorithms - Olin College of Engineering - Spring 2024
 ### Assignment 7
 
 - Implemented a Hash Map (Associative Array) data structure.
-- Implemented the Lempel-Ziv LZ78 algorithm for lossless data compression.
+- Implemented the Lempel-Ziv-Welch algorithm for lossless data compression.
 
 (https://github.com/sparshgup/DSA/tree/main/assignment7)
