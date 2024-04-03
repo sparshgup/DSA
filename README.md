@@ -46,3 +46,9 @@ Data Structures and Algorithms - Olin College of Engineering - Spring 2024
 - Implemented the Lempel-Ziv-Welch algorithm for lossless data compression.
 
 (https://github.com/sparshgup/DSA/tree/main/assignment7)
+
+### Assignment 8
+
+- Implemented Solutions to Binary Search Trees Leetcode problems.
+
+(https://github.com/sparshgup/DSA/tree/main/assignment8/src/main/kotlin)
